@@ -28,6 +28,9 @@ shinyUI(fluidPage(
                  p("Put you phrase a textbox and press predict button."),
                  p("you will see 3 word as suggestion for your next word in your phrase."),
                  br(),
+                 p("More details about algorithms or how this app was built in", 
+                                     a("http://www.aclweb.org/anthology/D07-1090.pdf", href= "http://www.aclweb.org/anthology/D07-1090.pdf"),
+                                     "."
         ),
         p("teste")
         )
