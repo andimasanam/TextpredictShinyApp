@@ -22,7 +22,12 @@ shinyUI(fluidPage(
                  ,br()
                  ,p("Spell Checker: Help you with any misspelling")
                  ,dataTableOutput("mytable1")
-                 )
+                 ), 
+        
+        tabPanel("Help me", 
+                 p("Put you phrase a textbox and press predict button."),
+                 p("you will see 3 word as suggestion for your next word in your phrase."),
+                 br(),
         ),
         p("teste")
         )
