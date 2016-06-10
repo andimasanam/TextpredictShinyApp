@@ -3,14 +3,14 @@ library(shiny)
 shinyUI(fluidPage(
   
  
-  titlePanel("Coursera - Data Science Capstone Project"),
+  titlePanel("Coursera Capstone Next Word Prediction Project"),
   
 
   sidebarLayout(
     sidebarPanel(
       textInput("sentence",
                 "Your phrase:",
-                "Business Analytics"),
+                "Have a nice"),
       submitButton("Predict")
     ),
     
@@ -20,18 +20,12 @@ shinyUI(fluidPage(
         tabPanel("Next Word", p("The next three predicted words for your phrase: "),
                  htmlOutput('predicted.word')
                  ,br()
-                 ,p("Spell Checker: Help you with any misspelling")
                  ,dataTableOutput("mytable1")
                  ), 
         
         tabPanel("Help me", 
                  p("Put you phrase a textbox and press predict button."),
-                 p("you will see 3 word as suggestion for your next word in your phrase."),
-                 br(),
-                 p("More details about algorithms or how this app was built in", 
-                                     a("http://www.aclweb.org/anthology/D07-1090.pdf", href= "http://www.aclweb.org/anthology/D07-1090.pdf"),
-                                     "."
-        ),
+                 p("you will see 5 word as suggestion for your next word in your phrase."),
         p("teste")
         )
       )
