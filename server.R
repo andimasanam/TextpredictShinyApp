@@ -45,14 +45,14 @@ predict <- function(input) {
     
     predictions = c(predictions,uni)
     predictions = unique(predictions)
-    predictions = predictions[1:3]
+    predictions = predictions[1:5]
     
   }
   
   if(NROW(predictions) > 3){
     
     predictions = unique(predictions)
-    predictions = predictions[1:3]
+    predictions = predictions[1:5]
     
   }
   
@@ -68,15 +68,5 @@ shinyServer(function(input, output) {
     li <- paste("<ul>",li,"</ul>",sep = "")
     HTML(li)
   })
-  
-  output$mytable1 <- renderDataTable({
-    miss = which_misspelled(input$sentence,suggest=TRUE)
-    miss = data.frame("Probably.Wrong" = miss$not.found,
-                      "Suggestion" = miss$suggestion)
-    
-  },
-  options = list(lengthMenu = c(20, 10, 20), pageLength = 5,
-                 searching = FALSE,paging = FALSE)
-  )
   
 })
